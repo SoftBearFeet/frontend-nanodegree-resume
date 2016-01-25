@@ -68,6 +68,12 @@ var projects = {
       "dates" : "2016",
       "description" : "description of project goes here.",
       "images" : "either a string goes here or an array of the image."
+     },
+     {
+      "title" : "Sample Project 2",
+      "dates" : "2016",
+      "description" : "description of project goes here.",
+      "images" : "either a string goes here or an array of the image."
      }
     ]
 }
@@ -136,3 +142,26 @@ if (bio.skills.length > 0) {
   };
 
  $("#main").append(internationalizeButton);
+
+//Encapsulation Function for Projects.Display:
+  projects.display = function() {
+
+    $("#projects").append(HTMLprojectStart);
+
+    for (project in projects.projects) {
+
+      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+
+      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+
+      var formattedDesription = HTMLprojectDescription.replace("%data%", projects.projects[project].description)
+
+      $(".project-entry").append(formattedTitle);
+
+      $(".project-entry").append(formattedDates);
+
+      $(".project-entry").append(formattedDesription);
+    };
+  }
+
+  projects.display();

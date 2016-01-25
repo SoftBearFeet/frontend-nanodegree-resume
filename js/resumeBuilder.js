@@ -94,15 +94,29 @@ if (bio.skills.length > 0) {
 
 
 //More testing below (For-In Loops):
+  function displaywork() {
 
- for (job in work.jobs) {
-  $("#workExperience").append("HTMLworkStart");
+   for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
 
-  var formattedEmployer = HTMLworkEmployer.replace("%data", work.jobs[job].employer);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 
-  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 
-  var formattedEmployerTitle = formattedEmployer + formattedTitle
+    var formattedEmployerTitle = formattedEmployer + formattedTitle
 
-  $(".work-entry:last").append(formattedEmployerTitle);
- }
+    $(".work-entry:last").append(formattedEmployerTitle);
+
+    var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+
+    $(".work-entry:last").append(formattedWorkDates);
+
+    var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    $(".work-entry:last").append(formattedWorkDescription);
+   }
+  }
+
+  displaywork();
+
+//Click function test:

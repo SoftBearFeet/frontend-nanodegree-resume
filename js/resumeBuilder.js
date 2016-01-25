@@ -120,3 +120,8 @@ if (bio.skills.length > 0) {
   displaywork();
 
 //Click function test:
+  $(document).click(function(loc) {
+    var xLoc = loc.pageX;
+    var yLoc = loc.pageY;
+    logClicks(xLoc, yLoc);
+  });

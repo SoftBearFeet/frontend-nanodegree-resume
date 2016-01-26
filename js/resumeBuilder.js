@@ -165,3 +165,7 @@ if (bio.skills.length > 0) {
   }
 
   projects.display();
+
+// Google Map:
+
+ $("#mapDiv").append(googleMap);

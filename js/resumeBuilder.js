@@ -14,6 +14,25 @@ var bio = {
   "biopic" : "images/sM&kids.jpg"
 }
 
+var education = {
+  "schools": [
+   {
+     "name": "Robert Service High School"
+     "location": "Anchorage, AK"
+     "majors": "High School Diploma"
+     "dates": "2008"
+     "url": "http://www.asdk12.org/aboutschools/service/schoolname,3120,en.html"
+    }],
+  "onlineCourses": [
+   {
+     "title": "Front-End Web Developer Nanodegree"
+     "school": "Udacity"
+     "date": "2016 - Present"
+     "url": "https://www.udacity.com/"
+    }]
+  "display": function
+}
+
 var work = {
   "jobs" : [
     {

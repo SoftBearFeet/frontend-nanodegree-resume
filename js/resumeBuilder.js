@@ -96,6 +96,15 @@ var projects = {
     ]
 }
 
+// Adding Code to have Name/Role display:
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedMain = formattedName + formattedRole;
+console.log(formattedMain);
+$("#name").append(formattedMain);
+
+
 
 // Testing stuff below (If Statements):
 
@@ -127,7 +136,7 @@ if (bio.skills.length > 0) {
 
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 
-    var formattedEmployerTitle = formattedEmployer + formattedTitle
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
     $(".work-entry:last").append(formattedEmployerTitle);
 
@@ -172,7 +181,7 @@ if (bio.skills.length > 0) {
 
       var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 
-      var formattedDesription = HTMLprojectDescription.replace("%data%", projects.projects[project].description)
+      var formattedDesription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 
       $(".project-entry").append(formattedTitle);
 

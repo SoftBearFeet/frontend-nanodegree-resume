@@ -5,7 +5,7 @@ var bio = {
     "mobile" : "907-xxx-xxxx",
     "email" : "example@gmail.com",
     "github" : "https://github.com/SoftBearFeet",
-    "location" : "Alaska"
+    "location" : "Anchorage, AK"
   },
   "welcomeMessage" : "Hello and welcome to my interactive Resume Webpage",
   "skills" : [
@@ -19,42 +19,42 @@ var work = {
     {
      "employer" : "Alaska Communications",
      "title" : "IT Operations",
-     "location" : "Alaska",
+     "location" : "Anchorage, AK",
      "dates" : "2012 - Present",
      "description" : "description of job goes here."
    },
    {
     "employer" : "Alaska Communications",
     "title" : "IT Helpdesk",
-    "location" : "Alaska",
+    "location" : "Anchorage, AK",
     "dates" : "2011 - 2012",
     "description" : "description of job goes here."
    },
    {
     "employer" : "Alaska Communications",
     "title" : "IT Tech Support II / Coordinator",
-    "location" : "Alaska",
+    "location" : "Anchorage, AK",
     "dates" : "2009 - 2012",
     "description" : "description of job goes here."
    },
    {
     "employer" : "Alaska Communications",
     "title" : "Customer Support II",
-    "location" : "Alaska",
+    "location" : "Anchorage, AK",
     "dates" : "2008 - 2009",
     "description" : "description of job goes here."
    },
    {
     "employer" : "Fast Fix Jewelry",
     "title" : "Jeweler / Administrator",
-    "location" : "Alaska",
+    "location" : "Anchorage, AK",
     "dates" : "2008 - 2008",
     "description" : "description of job goes here."
    },
    {
     "employer" : "CompUSA",
     "title" : "Service Advisor",
-    "location" : "Alaska",
+    "location" : "Anchorage, AK",
     "dates" : "2006 - 2007",
     "description" : "description of job goes here."
    }

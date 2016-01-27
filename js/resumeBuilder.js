@@ -96,16 +96,30 @@ var projects = {
     ]
 }
 
-// Adding Code to have Name/Role display:
+// Code to have Name/Role display:
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedMain = formattedName + formattedRole;
 console.log(formattedMain);
-$("#name").append(formattedMain);
+$("#header").append(formattedMain);
+
+// Code to have Contact Info be displayed, wanted to try creating a function:
+
+function displayContact() {
+
+  var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+  var formattedContact = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+  
+  $("#topContacts").append(formattedContact)
 
 
+};
 
+displayContact();
 // Testing stuff below (If Statements):
 
 if (bio.skills.length > 0) {

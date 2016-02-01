@@ -102,7 +102,8 @@ var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedMain = formattedName + formattedRole;
 console.log(formattedMain);
-$("#header").append(formattedMain);
+$("#header").prepend(formattedMain);
+
 
 // Code to have Contact Info be displayed, wanted to try creating a function:
 
@@ -113,7 +114,7 @@ function displayContact() {
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedContact = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
-  
+
   $("#topContacts").append(formattedContact)
 
 

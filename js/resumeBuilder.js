@@ -122,7 +122,8 @@ function displayContact() {
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedContact = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
 
-  $("#topContacts").append(formattedContact)
+  $("#topContacts").append(formattedContact);
+  $("#footerContacts").append(formattedContact)
 
 
 };
@@ -205,10 +206,11 @@ displaySkills();
     name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
     return name[0] +" "+ name[1];
   };
-*/
+
 
 
  $("#main").append(internationalizeButton);
+*/
 
 //Encapsulation Function for Projects.Display:
   projects.display = function() {

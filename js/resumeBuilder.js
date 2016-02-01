@@ -197,7 +197,7 @@ displaySkills();
     logClicks(xLoc, yLoc);
   });
 
-//Internationalizte Name Button:
+/*Internationalizte Name Button:
 
   function inName(name) {
     name = name.trim().split(" ");
@@ -205,6 +205,8 @@ displaySkills();
     name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
     return name[0] +" "+ name[1];
   };
+*/
+
 
  $("#main").append(internationalizeButton);
 

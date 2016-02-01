@@ -97,16 +97,17 @@ var projects = {
 }
 
 // Code to have Name/Role display:
-function displayBio () {
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedMain = formattedName + formattedRole;
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-console.log(formattedMain);
-$("#header").prepend(formattedMain);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
+ function displayBio () {
+
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedMain = formattedName + formattedRole;
+  var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+  console.log(formattedMain);
+  $("#header").prepend(formattedMain);
+  $("#header").append(formattedBioPic);
+  $("#header").append(formattedWelcomeMsg);
 };
 
 displayBio();
@@ -126,9 +127,13 @@ function displayContact() {
 };
 
 displayContact();
+// Code to have Skills displayed:
+
+**
+
 // Testing stuff below (If Statements):
 
-if (bio.skills.length > 0) {
+/*if (bio.skills.length > 0) {
 
  $("#header").append(HTMLskillsStart);
 
@@ -144,6 +149,7 @@ if (bio.skills.length > 0) {
  formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
  $("#skills").append(formattedSkill);
 }
+*/
 
 
 //More testing below (For-In Loops):

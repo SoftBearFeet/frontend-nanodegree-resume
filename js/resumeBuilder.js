@@ -97,7 +97,7 @@ var projects = {
 }
 
 // Code to have Name/Role display:
- function displayBio () {
+ function displayBio() {
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -129,8 +129,18 @@ function displayContact() {
 displayContact();
 // Code to have Skills displayed:
 
-**
+function displaySkills() {
 
+ $("#header").append(HTMLskillsStart);
+ 
+ for(skill in bio.skills) {
+
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+  $("#skills").append(formattedSkill);
+ }
+};
+
+displaySkills();
 // Testing stuff below (If Statements):
 
 /*if (bio.skills.length > 0) {

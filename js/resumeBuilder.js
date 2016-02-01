@@ -101,8 +101,12 @@ var projects = {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedMain = formattedName + formattedRole;
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 console.log(formattedMain);
 $("#header").prepend(formattedMain);
+$("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMsg);
 
 
 // Code to have Contact Info be displayed, wanted to try creating a function:

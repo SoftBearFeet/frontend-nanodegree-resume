@@ -18,6 +18,7 @@ var education = {
   "schools": [
    {
      "name": "Robert Service High School",
+     "degree": "High School Diploma",
      "location": "Anchorage, AK",
      "majors": "High School Diploma",
      "dates": "2008",
@@ -132,7 +133,7 @@ displayContact();
 function displaySkills() {
 
  $("#header").append(HTMLskillsStart);
- 
+
  for(skill in bio.skills) {
 
   var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
@@ -143,7 +144,7 @@ function displaySkills() {
 displaySkills();
 // Testing stuff below (If Statements):
 
-/*if (bio.skills.length > 0) {
+ /*if (bio.skills.length > 0) {
 
  $("#header").append(HTMLskillsStart);
 
@@ -158,6 +159,7 @@ displaySkills();
 
  formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
  $("#skills").append(formattedSkill);
+
 }
 */
 
@@ -228,6 +230,62 @@ displaySkills();
   }
 
   projects.display();
+
+// Code to have education display:
+
+function displayEducation() {
+
+ $("#education").append(HTMLschoolStart);
+
+ for(school in education.schools){
+
+  var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+
+  var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+
+  var formattedDate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+
+  var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+
+  var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+
+  var formattedNameDegree = formattedName + formattedDegree
+
+  $(".education-entry:last").append(formattedNameDegree);
+
+  $(".education-entry:last").append(formattedDate);
+
+  $(".education-entry:last").append(formattedLocation);
+
+  $(".education-entry:last").append(formattedMajor);
+
+ };
+
+ $(".education-entry").append(HTMLonlineClasses);
+
+ for(online in education.onlineCourses) {
+
+  var formattedName = HTMLonlineTitle.replace("#", education.onlineCourses[online].url).replace("%data%", education.onlineCourses[online].title);
+
+  var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
+
+  var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].date);
+
+  var formattedUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[online].url);
+
+  var formattedNameSchool = formattedName + formattedSchool;
+
+  $(".education-entry:last").append(formattedNameSchool);
+
+  $(".education-entry:last").append(formattedDates);
+
+  $(".education-entry:last").append(formattedUrl);
+
+ };
+
+}
+
+displayEducation();
 
 // Google Map:
 

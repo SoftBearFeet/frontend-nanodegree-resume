@@ -97,7 +97,7 @@ var projects = {
 }
 
 // Code to have Name/Role display:
-
+function displayBio () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedMain = formattedName + formattedRole;
@@ -107,8 +107,9 @@ console.log(formattedMain);
 $("#header").prepend(formattedMain);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
+};
 
-
+displayBio();
 // Code to have Contact Info be displayed, wanted to try creating a function:
 
 function displayContact() {

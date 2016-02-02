@@ -1,37 +1,37 @@
 var bio = {
-  "name" : "Mark Schneider",
-  "role" : "Web Developer",
-  "contacts" : {
-    "mobile" : "907-xxx-xxxx",
-    "email" : "example@gmail.com",
-    "github" : "https://github.com/SoftBearFeet",
-    "location" : "Anchorage, AK"
-  },
-  "welcomeMessage" : "Hello and welcome to my interactive Resume Webpage",
-  "skills" : [
-    "Technical Support", "HTML/CSS/JS", "Python", "Communication", "Learning"
-  ],
-  "biopic" : "images/sM&kids.jpg"
-}
+        "name" : "Mark Schneider",
+        "role" : "Web Developer",
+        "contacts" : {
+            "mobile" : "907-xxx-xxxx",
+            "email" : "example@gmail.com",
+            "github" : "https://github.com/SoftBearFeet",
+            "location" : "Anchorage, AK"
+        },
+        "welcomeMessage" : "Hello and welcome to my interactive Resume Webpage",
+        "skills" : [
+            "Technical Support", "HTML/CSS/JS", "Python", "Communication", "Learning"
+        ],
+        "biopic" : "images/sM&kids.jpg"
+    };
 
 var education = {
-  "schools": [
-   {
-     "name": "Robert Service High School",
-     "degree": "High School Diploma",
-     "location": "Anchorage, AK",
-     "majors": "High School Diploma",
-     "dates": "2008",
-     "url": "http://www.asdk12.org/aboutschools/service/schoolname,3120,en.html"
-    }],
-  "onlineCourses": [
-   {
+        "schools": [
+            {
+                "name": "Robert Service High School",
+                "degree": "High School Diploma",
+                "location": "Anchorage, AK",
+                "majors": "High School Diploma",
+                "dates": "2008",
+                "url": "http://www.asdk12.org/aboutschools/service/schoolname,3120,en.html"
+            }],
+        "onlineCourses": [
+            {
      "title": "Front-End Web Developer Nanodegree",
      "school": "Udacity",
      "date": "2016 - Present",
      "url": "https://www.udacity.com/"
     }]
-}
+};
 
 var work = {
   "jobs" : [
@@ -78,28 +78,21 @@ var work = {
     "description" : "description of job goes here."
    }
   ]
-}
+};
 
 var projects = {
     "projects" : [
      {
-      "title" : "Sample Project 1",
+      "title" : "Responsive Wed Design",
       "dates" : "2016",
       "description" : "description of project goes here.",
-      "images" : "either a string goes here or an array of the image."
-     },
-     {
-      "title" : "Sample Project 2",
-      "dates" : "2016",
-      "description" : "description of project goes here.",
-      "images" : "either a string goes here or an array of the image."
-     }
-    ]
-}
+      "images" : ["images/Project1_1.PNG", "Project1_2.PNG"]
+     }]
+};
 
 // Code to have Name/Role display:
  function displayBio() {
-
+  "use strict";
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   var formattedMain = formattedName + formattedRole;
@@ -109,13 +102,13 @@ var projects = {
   $("#header").prepend(formattedMain);
   $("#header").append(formattedBioPic);
   $("#header").append(formattedWelcomeMsg);
-};
+}
 
 displayBio();
 // Code to have Contact Info be displayed, wanted to try creating a function:
 
 function displayContact() {
-
+  "use strict";
   var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
@@ -123,16 +116,14 @@ function displayContact() {
   var formattedContact = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
 
   $("#topContacts").append(formattedContact);
-  $("#footerContacts").append(formattedContact)
-
-
-};
+  $("#footerContacts").append(formattedContact);
+}
 
 displayContact();
 // Code to have Skills displayed:
 
 function displaySkills() {
-
+ "use strict";
  $("#header").append(HTMLskillsStart);
 
  for(skill in bio.skills) {
@@ -230,8 +221,17 @@ displaySkills();
       $(".project-entry").append(formattedDates);
 
       $(".project-entry").append(formattedDesription);
-    };
-  }
+     };
+
+     if (projects.projects.images > 1) {
+      for (pic in projects.projects.images) {
+       var formattedPic = HTMLprojectImage.replace("%data%", projects.projects.images[pic]);
+
+       $(".project-entry").append(formattedPic);
+      };
+      }
+
+    }
 
   projects.display();
 
